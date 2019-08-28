@@ -18,10 +18,37 @@
     <None Update="build.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="lib\pvt.cppan.demo.danbloomberg.leptonica-1.76.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.google.tesseract.libtesseract-master.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.jpeg-9.2.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.madler.zlib-1.2.11.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.openjpeg.openjp2-2.3.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.png-1.6.35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.tiff-4.0.9.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.webp-0.6.1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="lib\pvt.cppan.demo.xz_utils.lzma-5.2.4.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
-  <Target Name="PreCompilationTarget" BeforeTargets="Build">
-    <Exec WorkingDirectory="$(TargetDir)"  Command="powershell.exe -NonInteractive -File build.ps1"></Exec>
+  <Target Name="PostCompilationTarget" BeforeTargets="Build">
+    <Exec WorkingDirectory="$(TargetDir)" Command="powershell.exe -NonInteractive -File build.ps1"></Exec>
   </Target>
 
 </Project>
